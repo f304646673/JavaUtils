@@ -10,6 +10,7 @@ public class FileSerialize {
         try(FileOutputStream fos = new FileOutputStream(fileName)) {
             try(ObjectOutputStream oos = new ObjectOutputStream(fos)) {
                 oos.writeObject(obj);
+                oos.flush();
             }
         }
     }
